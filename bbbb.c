@@ -266,5 +266,6 @@ char escolher(){
 
  }while(escolha == 1 || escolha == 2);
 
+	return escolha;
 
 }
