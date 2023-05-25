@@ -58,10 +58,13 @@ int main() {
                 for (i = 0; i < Prof; i++) {
                     printf("\nNome: ");
                     scanf(" %s", professor[i].nome);
+                    fflush(stdin);
                     printf("\nFuncional: ");
                     scanf(" %s", professor[i].funcional);
+                    fflush(stdin);
                     printf("\nTitulação: ");
                     scanf(" %s", professor[i].titulo);
+                    fflush(stdin);
                     printf("\n---------\n");
                 }
                 break;
@@ -71,12 +74,13 @@ int main() {
                 for (d = 0; d < plina; d++) {
                     printf("Nome: ");
                     scanf(" %s", disciplina[d].nome);
+                    fflush(stdin);
                     printf("Carga Horaria: ");
                     scanf("%d", &disciplina[d].carga_horaria);
+                    fflush(stdin);
                     printf("Codigo: ");
                     scanf("%d", &disciplina[d].cod);
-
-
+                    fflush(stdin);
                     printf("\n---------\n");
                 }
                 break;
@@ -86,8 +90,10 @@ int main() {
                 for (e = 0; e < TAM; e++) {
                     printf("\nNome aluno: ");
                     scanf(" %s", estudante[e].nome);
+                    fflush(stdin);
                     printf("Mat. aluno: ");
                     scanf(" %s", estudante[e].matricula);
+                    fflush(stdin);
                     estudante[e].idade = le_valida_idade();
                     printf("\n---------\n");
                 }
@@ -192,6 +198,7 @@ char escolher() {
 
         printf("Escolha o professor: ");
         scanf(" %c", &escolha);
+        fflush(stdin);
     } while (escolha != '1' && escolha != '2');
 
     return escolha;
